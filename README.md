@@ -63,9 +63,11 @@ git push origin feature-login # feature 브랜치 push
 
 | 명령어 | 설명 |
 |---|---|
+| `/setup` | Git/GitHub 초기 설정을 단계별로 진행 (Git 설치 ~ SSH 연결 ~ 저장소 준비) |
+| `/step` | 전체 10단계 진행 상황을 체크리스트로 보여주고 현재 단계 안내 |
+| `/workflow` | 현재 git 상태를 분석하고 GitHub Flow 다음 단계 안내 |
 | `/help` | 가드레일 동작 방식, 차단 규칙, FAQ 안내 |
 | `/scenarios` | 실제 차단/허용 시나리오 6가지 예시 |
-| `/workflow` | 현재 git 상태를 분석하고 GitHub Flow 다음 단계 안내 |
 
 ## 차단 시 동작
 
