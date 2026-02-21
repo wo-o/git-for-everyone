@@ -1,7 +1,0 @@
-{
-  "name": "git-for-everyone",
-  "description": "Git guardrails for Claude Code — blocks dangerous remote operations like force push, direct push to protected branches, and destructive GitHub CLI commands",
-  "author": {
-    "name": "wo-o"
-  }
-}

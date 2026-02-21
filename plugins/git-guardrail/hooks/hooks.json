@@ -1,5 +1,5 @@
 {
-  "description": "Git remote operation guardrails — blocks force push, protected branch push, and dangerous gh CLI commands",
+  "description": "Git 원격 작업 가드레일 — force push, 보호 브랜치 push, 위험한 gh CLI 명령을 차단합니다",
   "hooks": {
     "PreToolUse": [
       {
