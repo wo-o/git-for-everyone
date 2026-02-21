@@ -1,0 +1,8 @@
+{
+  "name": "git-guardrail",
+  "description": "Blocks dangerous remote Git operations: force push, direct push to protected branches, and destructive GitHub CLI commands",
+  "author": {
+    "name": "wo-o",
+    "url": "https://github.com/wo-o"
+  }
+}
