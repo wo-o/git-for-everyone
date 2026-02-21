@@ -1,0 +1,12 @@
+{
+  "name": "safe-git",
+  "version": "0.1.0",
+  "description": "비개발자를 위한 안전한 Git 사용 스킬. 자연어로 Git을 사용하고, 위험한 작업을 차단합니다.",
+  "author": {
+    "name": "wo-o",
+    "url": "https://github.com/wo-o"
+  },
+  "repository": "https://github.com/wo-o/git-for-everyone",
+  "license": "MIT",
+  "keywords": ["git", "github", "non-developers", "safety", "natural-language"]
+}
