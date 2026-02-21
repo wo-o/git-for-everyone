@@ -1,0 +1,8 @@
+{
+  "name": "git-workflow",
+  "description": "GitHub Flow 워크플로우를 안내합니다 — main 브랜치 직접 commit/merge 차단 + 다음 단계 가이드",
+  "author": {
+    "name": "wo-o",
+    "url": "https://github.com/wo-o"
+  }
+}
