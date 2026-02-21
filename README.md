@@ -24,10 +24,11 @@ Claude Code에서 플러그인을 설치하세요.
 
 | 명령어 | 설명 |
 |---|---|
-| `/git-onboarding:setup` | Git/GitHub 초기 설정 9단계 자동 진행 |
-| `/git-onboarding:workflow` | 현재 git 상태 분석 → 다음 단계 안내 |
-| `/git-onboarding:step` | 진행 상황 체크리스트 |
-| `/git-onboarding:help` | 플러그인 가이드, 용어 설명, FAQ |
+| `/git-onboarding-auto` | 설정 ~ 파일 생성 ~ 브랜치 ~ PR까지 완전 자동화 |
+| `/git-onboarding-setup` | Git/GitHub 초기 설정 9단계 자동 진행 |
+| `/git-onboarding-workflow` | 현재 git 상태 분석 → 다음 단계 안내 |
+| `/git-onboarding-step` | 진행 상황 체크리스트 |
+| `/git-onboarding-help` | 플러그인 가이드, 용어 설명, FAQ |
 
 ## setup 단계
 
@@ -60,7 +61,7 @@ Claude Code에서 플러그인을 설치하세요.
 
 ## workflow 안내
 
-`/git-onboarding:workflow`를 실행하면 현재 상태에 따라 다음 단계를 안내합니다:
+`/git-onboarding-workflow`를 실행하면 현재 상태에 따라 다음 단계를 안내합니다:
 
 | 상태 | 안내 |
 |---|---|

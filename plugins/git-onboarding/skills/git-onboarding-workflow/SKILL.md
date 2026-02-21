@@ -1,5 +1,5 @@
 ---
-name: workflow
+name: git-onboarding-workflow
 description: 현재 git 상태를 분석하고 GitHub Flow 기준으로 다음 단계를 안내합니다. "다음에 뭐 해야 돼?", "워크플로우", "git 흐름" 같은 질문에 사용됩니다.
 ---
 

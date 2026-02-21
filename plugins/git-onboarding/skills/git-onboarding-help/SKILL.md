@@ -1,5 +1,5 @@
 ---
-name: help
+name: git-onboarding-help
 description: git-onboarding 플러그인의 기능, 단계별 구성, 사용 가능한 명령어를 안내합니다. "온보딩 도움말", "어떻게 시작해?", "git 처음", "초보자 가이드" 같은 질문에 사용됩니다.
 ---
 
@@ -22,9 +22,15 @@ Git 설치부터 Pull Request(PR) 생성까지, 총 10단계를 하나씩 안내
 
 ## 사용 가능한 명령어
 
-이 플러그인에서 사용할 수 있는 명령어는 3개입니다:
+이 플러그인에서 사용할 수 있는 명령어는 4개입니다:
 
-### /git-onboarding:setup — 초기 설정 진행
+### /git-onboarding-auto — 완전 자동화 (설정 ~ PR)
+
+Git 설정부터 파일 생성, 브랜치, 커밋, push, PR 생성까지 전 과정을 한 번에 자동으로 실행합니다.
+이미 완료된 단계는 건너뛰고, 꼭 필요한 것만 질문합니다.
+"전부 자동으로 해줘", "원클릭 PR" 같은 요청에 사용하세요.
+
+### /git-onboarding-setup — 초기 설정 진행
 
 Git과 GitHub를 사용하기 위한 기본 설정을 단계별로 해줍니다.
 이미 끝난 단계는 자동으로 건너뛰므로, 중간부터 이어서 할 수도 있습니다.
@@ -58,12 +64,12 @@ GitHub에 저장소를 만들고 로컬과 연결합니다.
 **단계 9. Git hooks 설치**
 main 브랜치 보호 + conventional commits 검증 hook을 설치합니다.
 
-### /git-onboarding:workflow — 다음 단계 안내
+### /git-onboarding-workflow — 다음 단계 안내
 
 현재 git 상태를 분석하고 GitHub Flow 기준으로 다음에 할 일을 안내합니다.
 "지금 뭘 해야 하지?" 싶을 때 사용하세요.
 
-### /git-onboarding:step — 진행 상황 확인
+### /git-onboarding-step — 진행 상황 확인
 
 설치부터 PR 생성까지 전체 10단계의 진행 상황을 보여줍니다.
 현재 상태를 자동으로 감지하여 뭐가 끝났고 뭐가 남았는지 체크리스트로 알려줍니다.
@@ -89,7 +95,7 @@ Git 시작하기 — 현재 진행 상황
 
 ## 전체 흐름 한눈에 보기
 
-**설정 (1~9) — /git-onboarding:setup이 안내**
+**설정 (1~9) — /git-onboarding-setup이 안내**
 
 | 단계 | 뭘 하나요? | 왜 필요한가요? |
 |---|---|---|
@@ -103,30 +109,31 @@ Git 시작하기 — 현재 진행 상황
 | 8 | 첫 push | GitHub에 main 브랜치를 생성합니다 |
 | 9 | Git hooks 설치 | main 보호 + 커밋 메시지 검증을 설정합니다 |
 
-**작업 — /git-onboarding:workflow가 안내**
+**작업 — /git-onboarding-workflow가 안내**
 
-setup이 끝나면 `/git-onboarding:workflow`로 브랜치 생성 → 커밋 → push → PR까지 안내받을 수 있습니다.
+setup이 끝나면 `/git-onboarding-workflow`로 브랜치 생성 → 커밋 → push → PR까지 안내받을 수 있습니다.
 
 ## 추천 사용 순서
 
 처음 시작하는 분은 이 순서로 진행하세요:
 
-1. `/git-onboarding:setup` — 설정이 안 된 부분을 진행합니다
-2. `/git-onboarding:workflow` — 설정이 끝나면 실제 작업(브랜치, 커밋, push, PR)을 안내받습니다
-3. `/git-onboarding:step` — 언제든 현재 진행 상황을 확인합니다
+1. `/git-onboarding-auto` — 설정부터 PR까지 한 번에 자동으로 진행합니다 (추천)
+2. `/git-onboarding-setup` — 설정만 단계별로 진행합니다
+3. `/git-onboarding-workflow` — 설정이 끝나면 실제 작업을 안내받습니다
+4. `/git-onboarding-step` — 언제든 현재 진행 상황을 확인합니다
 
 ## 자주 묻는 질문
 
 **Q: Git을 한 번도 써본 적 없습니다. 어디서 시작하나요?**
-A: `/git-onboarding:setup`을 입력하세요. Git이 설치되어 있는지부터 확인하고, 하나씩 차근차근 안내합니다. 어려운 명령어는 자동으로 실행해주고, 선택이 필요한 부분만 질문합니다.
+A: `/git-onboarding-setup`을 입력하세요. Git이 설치되어 있는지부터 확인하고, 하나씩 차근차근 안내합니다. 어려운 명령어는 자동으로 실행해주고, 선택이 필요한 부분만 질문합니다.
 
 **Q: 어디까지 했는지 기억이 안 납니다**
-A: `/git-onboarding:step`을 입력하세요. 자동으로 현재 상태를 감지해서 뭐가 끝났고 뭐가 남았는지 체크리스트로 보여줍니다.
+A: `/git-onboarding-step`을 입력하세요. 자동으로 현재 상태를 감지해서 뭐가 끝났고 뭐가 남았는지 체크리스트로 보여줍니다.
 
 **Q: SSH 키가 뭔가요? 어렵지 않나요?**
 A: SSH 키는 내 컴퓨터와 GitHub 사이의 "신분증"입니다.
 비밀번호를 매번 입력하는 대신, 이 키가 자동으로 "나 맞아요"라고 인증해줍니다.
-`/git-onboarding:setup`이 키 생성부터 GitHub 등록까지 전부 안내하니 걱정하지 마세요.
+`/git-onboarding-setup`이 키 생성부터 GitHub 등록까지 전부 안내하니 걱정하지 마세요.
 
 **Q: noreply 이메일이 뭔가요?**
 A: GitHub가 제공하는 비공개 이메일 주소입니다.
@@ -135,7 +142,7 @@ GitHub 잔디(contribution)도 정상적으로 심어집니다.
 GitHub > Settings > Emails에서 확인할 수 있습니다.
 
 **Q: 설정(setup)이 다 끝났는데 다음에 뭘 하나요?**
-A: `/git-onboarding:workflow`를 입력하세요. 브랜치 만들기, 커밋, push, PR 생성까지 현재 상태에 맞게 다음 단계를 안내합니다.
+A: `/git-onboarding-workflow`를 입력하세요. 브랜치 만들기, 커밋, push, PR 생성까지 현재 상태에 맞게 다음 단계를 안내합니다.
 
 **Q: clone과 init의 차이가 뭔가요?**
 A: 둘 다 프로젝트를 시작하는 방법입니다.
@@ -144,5 +151,5 @@ A: 둘 다 프로젝트를 시작하는 방법입니다.
 
 **Q: 잔디(contribution)가 안 심어집니다**
 A: Git 이메일 설정이 GitHub 계정 이메일과 같은지 확인하세요.
-`/git-onboarding:step`을 실행하면 현재 설정된 이메일을 확인할 수 있습니다.
-다르다면 `/git-onboarding:setup`으로 이메일을 다시 설정하세요.
+`/git-onboarding-step`을 실행하면 현재 설정된 이메일을 확인할 수 있습니다.
+다르다면 `/git-onboarding-setup`으로 이메일을 다시 설정하세요.

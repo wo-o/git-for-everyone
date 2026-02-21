@@ -1,5 +1,5 @@
 ---
-name: setup
+name: git-onboarding-setup
 description: Git과 GitHub 초기 설정을 단계별로 진행합니다. "git 설정", "처음 시작", "GitHub 로그인", "깃 세팅" 같은 요청에 사용됩니다.
 ---
 
@@ -43,7 +43,7 @@ Git이 설치되어 있지 않습니다.
   xcode-select --install
 
 설치 팝업이 나타나면 "설치" 버튼을 클릭하세요.
-설치가 완료되면 다시 /git-onboarding:setup 을 실행해주세요.
+설치가 완료되면 다시 /git-onboarding-setup 을 실행해주세요.
 ```
 
 xcode-select는 GUI 팝업이 필요하므로 Claude가 직접 실행하지 마세요. 안내만 제공하고 이 단계에서 멈추세요.
@@ -107,7 +107,7 @@ brew install gh
 아래 링크에서 GitHub CLI를 다운로드하여 설치하세요:
   https://cli.github.com
 
-설치가 완료되면 다시 /git-onboarding:setup 을 실행해주세요.
+설치가 완료되면 다시 /git-onboarding-setup 을 실행해주세요.
 ```
 
 직접 설치는 Claude가 실행할 수 없으므로 안내만 제공하고 이 단계에서 멈추세요.
@@ -131,7 +131,7 @@ GitHub에 로그인해야 합니다.
   4. 화면에 나오는 코드를 복사한 뒤 Enter
   5. 브라우저에서 코드를 붙여넣고 인증 완료
 
-완료되면 다시 /git-onboarding:setup 을 실행해주세요.
+완료되면 다시 /git-onboarding-setup 을 실행해주세요.
 ```
 
 `gh auth login`은 브라우저 인터랙션이 필요하므로 Claude가 직접 실행하지 마세요. 안내만 제공하고 이 단계에서 멈추세요.
@@ -315,5 +315,5 @@ Git 초기 설정이 완료되었습니다.
   원격:    <origin URL>
   보호:    <"팀 — main 보호 + conventional commits (git hooks)" 또는 "개인 — 없음">
 
-다음 단계: /git-onboarding:workflow 를 실행하면 브랜치 생성부터 PR까지 안내합니다.
+다음 단계: /git-onboarding-workflow 를 실행하면 브랜치 생성부터 PR까지 안내합니다.
 ```
