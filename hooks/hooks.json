@@ -1,0 +1,17 @@
+{
+  "description": "Git remote operation guardrails — blocks force push, protected branch push, and dangerous gh CLI commands",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/usr/bin/env bash ${CLAUDE_PLUGIN_ROOT}/hooks/github-guardrail.sh",
+            "timeout": 5000
+          }
+        ]
+      }
+    ]
+  }
+}
