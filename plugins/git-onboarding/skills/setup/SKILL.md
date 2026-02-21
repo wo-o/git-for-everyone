@@ -253,7 +253,17 @@ GitHub에 main 브랜치를 생성했습니다.
 이제 원격 저장소와 로컬이 연결되었습니다.
 ```
 
-## 단계 9: 메인 브랜치 보호 (git hooks)
+## 단계 9: 작업 환경 선택
+
+AskUserQuestion으로 작업 환경을 물어보세요:
+
+- question: "이 저장소는 혼자 사용하나요, 팀으로 사용하나요?"
+- header: "작업 환경"
+- options:
+  - "개인 프로젝트" — 혼자 작업하는 저장소 (git hooks 설치 생략)
+  - "팀 프로젝트 (Recommended)" — 여러 명이 함께 작업 (git hooks로 브랜치 보호)
+
+### 팀 프로젝트를 선택한 경우
 
 **완료 조건:** `.git/hooks/pre-commit`, `.git/hooks/commit-msg`, `.git/hooks/pre-push` 파일이 모두 존재하고 실행 권한이 있음
 
@@ -287,6 +297,10 @@ Git hook을 설치했습니다.
 터미널에서 직접 git을 사용할 때도 동일하게 보호됩니다.
 ```
 
+### 개인 프로젝트를 선택한 경우
+
+Git hooks 설치를 건너뛰고 바로 완료 메시지로 넘어가세요.
+
 ## 완료 메시지
 
 모든 단계가 완료되면 설정 요약을 출력하세요:
@@ -299,7 +313,7 @@ Git 초기 설정이 완료되었습니다.
   GitHub:  로그인됨
   저장소:  <현재 디렉토리>
   원격:    <origin URL>
-  보호:    main/master 보호 + conventional commits (pre-commit, commit-msg, pre-push)
+  보호:    <"팀 — main 보호 + conventional commits (git hooks)" 또는 "개인 — 없음">
 
-다음 단계: /git-workflow:workflow 를 실행하면 브랜치 생성부터 PR까지 안내합니다.
+다음 단계: /git-onboarding:workflow 를 실행하면 브랜치 생성부터 PR까지 안내합니다.
 ```
