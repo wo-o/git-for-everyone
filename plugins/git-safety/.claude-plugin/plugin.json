@@ -1,0 +1,8 @@
+{
+  "name": "git-safety",
+  "description": "위험한 원격 Git 작업을 자동으로 차단합니다 — force push, 보호 브랜치 push, 파괴적 GitHub CLI 명령",
+  "author": {
+    "name": "wo-o",
+    "url": "https://github.com/wo-o"
+  }
+}

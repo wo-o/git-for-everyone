@@ -1,5 +1,5 @@
 {
-  "description": "Git 가드레일 — 원격 작업 차단 + main/master 브랜치 워크플로우 안내",
+  "description": "Git 안전장치 — 위험한 원격 작업 차단",
   "hooks": {
     "PreToolUse": [
       {
@@ -8,11 +8,6 @@
           {
             "type": "command",
             "command": "/usr/bin/env bash ${CLAUDE_PLUGIN_ROOT}/hooks/github-guardrail.sh",
-            "timeout": 5000
-          },
-          {
-            "type": "command",
-            "command": "/usr/bin/env bash ${CLAUDE_PLUGIN_ROOT}/hooks/workflow-guide.sh",
             "timeout": 5000
           }
         ]

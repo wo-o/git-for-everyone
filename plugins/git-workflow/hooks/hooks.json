@@ -1,0 +1,17 @@
+{
+  "description": "GitHub Flow — main/master 브랜치 워크플로우 안내",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/usr/bin/env bash ${CLAUDE_PLUGIN_ROOT}/hooks/workflow-guide.sh",
+            "timeout": 5000
+          }
+        ]
+      }
+    ]
+  }
+}

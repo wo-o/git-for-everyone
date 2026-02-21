@@ -1,8 +1,0 @@
-{
-  "name": "git-guardrail",
-  "description": "Git 가드레일 — 위험한 원격 작업 차단 + GitHub Flow 워크플로우 안내",
-  "author": {
-    "name": "wo-o",
-    "url": "https://github.com/wo-o"
-  }
-}
